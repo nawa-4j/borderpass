@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+    <style>
+        body{
+            font-family: Roboto;
+            font-size: 15px;
+        }
+        label{
+            font-size:15px;
+        }
+
+    </style>
+    <title>Manual Boarding Pass</title>
+</head>
+<body>
+    <h1 style="text-align: center;">Manual Boarding Pass Generator</h1>
+    <p style="text-align: center;">Having trouble accessing your boarding pass on your iOS device? <br>Use this tool to quickly and easily generate a printable boarding pass with a QR code, using just your UserID and Transaction Number.</p>
+    <form method="post" action="generate_qr.php">
+        <p><label for="id">Username: <i><br><span style="font-size: 10px;">(Please input your registered username with TBS app/TBS website)</span></i></label><br>
+        <input type="text" name="id" id="id"></p>
+        <p>
+        <label for="transaction_no">Transaction Number: <i><br><span style="font-size: 10px;">(Your transaction number is a unique code associated with your booking. It is 20 alpha-numeric that begins with number 6)</span></i></label><br>
+        <input type="text" name="transaction_no" id="transaction_no">
+        </p>
+        <input type="submit" value="Generate Boarding Pass">
+    </form>
+</body>
+</html>

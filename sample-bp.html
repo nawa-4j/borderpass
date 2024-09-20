@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <head>
+        <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+        <style>
+            
+            body{
+                
+                font-family: Roboto;
+                font-size: 15px;
+                width: 500px;
+                margin-top: -10px;
+
+            }
+
+            .headingTxt{
+                text-align: center;
+                font-size: 18px;
+                font-weight: 700;
+            }
+            .headingImg{
+                display: block;
+                margin: 0 auto;
+                width:100px;
+            }
+            .headingDisc{
+                font-size: 12px;
+                margin-left: 5%;
+                margin-right: 5%;
+                text-align: justify;
+            }
+            .headingDisc p{
+                color: red;
+                font-weight: 400;
+            }
+            .qrInfo{
+                text-align: center;
+                border-collapse: collapse;
+                margin-right: auto;
+                margin-left: auto;
+            }
+
+            .qrImg{
+                display: block;
+                margin: 0 auto;
+                width:100px;
+                align-self: center;
+                
+            }
+            .paxInfo, .gateInfo, .ticketInfo {
+                text-align: center;
+                width: 100%;
+                border-collapse: collapse;
+                font-weight: 500;
+                border-top: 1px #ddd solid;
+            }
+            .gateInfo {
+                text-align: center;
+                width: 100%;
+                border-collapse: collapse;
+                font-weight: 500;
+                border-top: 1px #ddd solid;
+            }
+            .gateInfo td:nth-child(even){
+                border-left: 1px #ddd solid;
+            }
+            .tripInfo {
+                text-align: center;
+                width: 100%;
+                border-collapse: collapse;
+                font-weight: 900;
+                
+            }
+            .tripInfo tr:nth-child(even){
+                border-bottom: 1px #ddd solid;
+            }
+            .tripInfo td{
+                padding: 10px 0px;
+            }
+            td{
+            padding:5px 0px;
+           }
+           .terms{
+            font-size: 11px;
+           }
+           
+           
+        </style>
+        <p class="headingTxt">BOOKING CODE DETAILS<br>
+        <img class="headingImg" src="http://10.20.40.22/ctsonline/Content/Images/sitt_logo.gif" alt="TERMINAL BERSEPADU SELATAN"></p>
+        
+        <p class="headingDisc"><b>IMPORTANT!</b></p>
+            <ul class="headingDisc">
+                <li><b>Please check your booking details carefully.</b> If you have any questions, you can reprint your boarding pass online from TBS eTicketing website.</li>
+                <li><b>Departing from TBS?</b> Print or screenshort this document and show your QR code at the Automatic Control Gate and boarding gate.</li>
+                <li><b>Departing from somewhere else?</b> Print your full booking receipt and you may need to redeem your ticket at the bus operator's counter before boarding.</li>
+            </ul>
+        
+    </head>
+   
+    <body>
+           <div style="border: solid black 1px; padding:15px;">
+            <table class="qrInfo">
+                <tr>
+                    <td width="70%"><img class="qrImg" src="{{qrImageURL}}" alt="QR Code generator failed! Please contact our Customer Service."></td>
+                    
+                </tr>
+            </table>
+
+            <table class="tripInfo">
+                <tr class="tripInfo"></tr>
+                    <td>[{{from}} - {{to}}]</td>
+                </tr>
+                <tr>
+                    <td>{{companyName}} | {{deptDate}} | {{deptTime}}</td>
+                </tr>
+            </table>
+
+            <table class="paxInfo">
+                <tr class="paxInfo">
+                    <td>Name<br><b>{{paxName}}</b></td>
+                </tr>
+                </tr>
+                <tr class="paxInfo">
+                    <td>IC/Passport<br><b>{{paxIC}}</b></td>
+                </tr>
+
+            </table>
+            <table class="gateInfo">
+                <tr class="gateInfo">
+                    <td>Gate<br><b>{{gateNo}}</b></td>
+                    <td>Seat<br><b>{{seatNo}}</b></td>
+                </tr>
+            </table>
+            <table class="ticketInfo">
+                <tr class="ticketInfo">
+                    <td>Ticket No<br><b>{{transactionId}}</b>
+                    </td>
+                </tr>
+                <tr class="ticketInfo">
+                    <td>Order ID<br><b>{{orderID}}</b></td>
+                </tr>
+                <tr class="ticketInfo">
+                    <td>Booking Code<br><b>{{authCode}}</b>
+                    </td>
+                </tr>
+            </table>
+           </div> 
+           <p class="terms"><b>Terms &amp; Conditions</b></p>
+           <ol class="terms">
+            <li>All ticket purchases are final.</li>
+            <li>Individual ticket price will add-on Admin Fee.</li>
+            <li>Maju TMAS terms &amp; conditions apply.</li>
+            <li>Bus operators' terms &amp; conditions will supersede this terms &amp; conditions.</li>
+            <li>Ticket purchased are not exchangeable, returnable, or refundable.</li>
+            <li>Please arrive at the bus terminal 1 hour before the departure time and proceed to the departure hall 30 minutes before the departure time.</li>
+           </ol>
+           <p class="terms">For any inquiry, please call our hotline at <b>603 - 9051 2000</b> or email to <b><a href="mailto:customercare@tbsbts.com.my">customercare@tbsbts.com.my</a></b></p>
+    </body>
+</html>
